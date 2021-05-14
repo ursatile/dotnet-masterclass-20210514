@@ -11,6 +11,7 @@ namespace Autobarn.Website.Controllers.Api {
 			IDictionary<string, object> expando = new ExpandoObject();
 			var properties = TypeDescriptor.GetProperties(value.GetType());
 			foreach (PropertyDescriptor property in properties) {
+				if (property.Attributes.OfType<JsonIgnoreAttribute>().Any()) continue;
 				expando.Add(property.Name, property.GetValue(value));
 			}
 			return (ExpandoObject)expando;
@@ -19,9 +20,6 @@ namespace Autobarn.Website.Controllers.Api {
 
 		public static dynamic ToHypermediaResult(this Car car) {
 			var result = car.ToDynamic();
-			result.CarModel = new {
-				href = $"/api/carmodels/{car.CarModel.Code}"
-			};
 			result._links = new {
 				self = new {
 					href = $"/api/cars/{car.Registration}"
