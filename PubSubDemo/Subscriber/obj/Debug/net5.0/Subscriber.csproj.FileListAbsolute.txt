@@ -1,0 +1,16 @@
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\Subscriber.exe
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\Subscriber.deps.json
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\Subscriber.runtimeconfig.json
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\Subscriber.runtimeconfig.dev.json
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\Subscriber.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\ref\Subscriber.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\bin\Debug\net5.0\Subscriber.pdb
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.csprojAssemblyReference.cache
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.GeneratedMSBuildEditorConfig.editorconfig
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.AssemblyInfoInputs.cache
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.AssemblyInfo.cs
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.csproj.CoreCompileInputs.cache
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\ref\Subscriber.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.pdb
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Subscriber\obj\Debug\net5.0\Subscriber.genruntimeconfig.cache
