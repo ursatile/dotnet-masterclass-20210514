@@ -20,6 +20,8 @@ namespace Autobarn.Data {
 			car.CarModel.Cars.Add(car);
 		}
 
+		public CarModel FindCarModel(string modelCode) => this.Models.FirstOrDefault(m => m.Code.Equals(modelCode, StringComparison.InvariantCultureIgnoreCase));
+
 		private readonly List<Make> makes;
 		private readonly List<CarModel> models;
 		private readonly List<Car> cars;
