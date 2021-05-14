@@ -9,4 +9,9 @@ namespace Autobarn.Messages {
 		public string Color { get; set; }
 		public DateTimeOffset ListedAt { get; set; }
 	}
+
+	public class NewCarPriceMessage : NewCarMessage {
+		public int Price {get;set;}
+		public string CurrencyCode { get;set;}
+	}
 }
