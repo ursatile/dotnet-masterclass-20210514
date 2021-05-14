@@ -22,12 +22,7 @@ namespace Autobarn.Website.Controllers.Api {
 			if (carModel == default) return BadRequest($"Sorry, we don't know anything about the car model {postData.ModelCode}");
 			// 2: Same car already listed for sale?
 			// 3: Everything's fine.
-			var car = new Car {
-				Registration = postData.Registration,
-				Color = postData.Color,
-				Year = postData.Year,
-				CarModel = carModel
-			};
+			var car = postData.ToCarEntity(carModel);
 			database.AddCar(car);
 			return Created($"/api/cars/{car.Registration}", car);
 		}
