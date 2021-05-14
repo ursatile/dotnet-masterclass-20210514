@@ -2,6 +2,7 @@
 using Autobarn.Data.Entities;
 using Autobarn.Website.Models.Api;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace Autobarn.Website.Controllers.Api {
@@ -17,16 +18,20 @@ namespace Autobarn.Website.Controllers.Api {
 
 		[HttpPost]
 		public IActionResult Post(PostCarDto postData) {
+			if (String.IsNullOrEmpty(postData.Registration)) {
+				return BadRequest("Cars with blank registrations are not allowed for sale");
+			}
+
+			var existingCar = database.FindCar(postData.Registration);
+			if (existingCar != default) return Conflict($"Sorry - the car with registration {postData.Registration} is already in our system!");
+
 			var carModel = database.FindCarModel(postData.ModelCode);		
-			// 1: What if the model code doesn't exist?
 			if (carModel == default) return BadRequest($"Sorry, we don't know anything about the car model {postData.ModelCode}");
-			// 2: Same car already listed for sale?
-			// 3: Everything's fine.
+
 			var car = postData.ToCarEntity(carModel);
 			database.AddCar(car);
 			return Created($"/api/cars/{car.Registration}", car);
 		}
-
 		
 		[HttpGet]
 		public IActionResult Get() {
