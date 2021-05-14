@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "TKtqMPuQykubu7n28M4sn/0sQ2GaJIk7vr50IFTrn1tsHkI99MVabVP8t83EmSLuuB+MWk1B3G5HKbkGITGbiQ==",
+  "dgSpecHash": "e3IPQ+ChtZTzxJ+HVYHd9Tllcc64eQJLfHdkO41Huc8bknrEmpNIIvmAyYCBOAnHY+CpGYH4wVQB2jxUEFTU9w==",
   "success": true,
   "projectFilePath": "D:\\workshops\\dotnet-masterclass-20210514\\PubSubDemo\\Publisher\\Publisher.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dylan\\.nuget\\packages\\easynetq\\6.3.1\\easynetq.6.3.1.nupkg.sha512",
+    "C:\\Users\\dylan\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\dylan\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\dylan\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\dylan\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -14,3 +14,13 @@ D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\obj\Debug\net5.0\P
 D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\obj\Debug\net5.0\ref\Publisher.dll
 D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\obj\Debug\net5.0\Publisher.pdb
 D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\obj\Debug\net5.0\Publisher.genruntimeconfig.cache
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Subscriber.deps.json
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Subscriber.runtimeconfig.json
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Subscriber.runtimeconfig.dev.json
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Subscriber.exe
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\EasyNetQ.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Subscriber.dll
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\bin\Debug\net5.0\Subscriber.pdb
+D:\workshops\dotnet-masterclass-20210514\PubSubDemo\Publisher\obj\Debug\net5.0\Publisher.csproj.CopyComplete
