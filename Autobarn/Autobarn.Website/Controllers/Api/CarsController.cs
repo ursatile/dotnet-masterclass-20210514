@@ -36,7 +36,7 @@ namespace Autobarn.Website.Controllers.Api {
 		
 		[HttpGet]
 		public IActionResult Get(int index, int count = 2) {
-			var items = database.Cars.Skip(index).Take(count);
+			var items = database.Cars.Skip(index).Take(count).Select(car => car.ToHypermediaResult());
 			var total = database.Cars.Count();
 			var links = Paginate("/api/cars", index, count, total);
 			var result = new {				
@@ -60,7 +60,8 @@ namespace Autobarn.Website.Controllers.Api {
 		public IActionResult Get(string id) {
 			var car = database.Cars.FirstOrDefault(c => c.Registration.Equals(id, System.StringComparison.InvariantCultureIgnoreCase));
 			if (car == default) return NotFound($"Sorry, we don't have a car with registration {id}");
-			return Ok(car);
+			var result = car.ToHypermediaResult();
+			return Ok(result);
 		}
 	}
 }
