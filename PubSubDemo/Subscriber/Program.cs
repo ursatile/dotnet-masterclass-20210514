@@ -7,7 +7,7 @@ namespace Subscriber {
 
 		static void Main(string[] args) {
 			using var bus = RabbitHutch.CreateBus(AMQP);
-            bus.PubSub.Subscribe<Message>("subscriber-id", HandleMessage);
+            bus.PubSub.Subscribe<Message>("dylan-in-london", HandleMessage);
             Console.ReadKey();
 		}
 

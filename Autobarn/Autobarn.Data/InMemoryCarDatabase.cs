@@ -12,7 +12,7 @@ namespace Autobarn.Data {
 		public IList<Make> Makes => makes;
 		public IList<CarModel> Models => models;
 		public Car FindCar(string registration) =>
-			Cars.Single(c =>
+			Cars.FirstOrDefault(c =>
 				String.Equals(c.Registration, registration, StringComparison.InvariantCultureIgnoreCase));
 
 		public void AddCar(Car car) {

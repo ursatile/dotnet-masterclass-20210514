@@ -1,6 +1,8 @@
 ﻿using Autobarn.Data;
 using Autobarn.Data.Entities;
+using Autobarn.Messages;
 using Autobarn.Website.Models.Api;
+using EasyNetQ;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Dynamic;
@@ -12,9 +14,11 @@ namespace Autobarn.Website.Controllers.Api {
 	[ApiController]
 	public class CarsController : ControllerBase {
 		private readonly ICarDatabase database;
+		private readonly IBus bus;
 
-		public CarsController(ICarDatabase database) {
+		public CarsController(ICarDatabase database, IBus bus) {
 			this.database = database;
+			this.bus = bus;
 		}
 
 		[HttpPost]
@@ -31,7 +35,20 @@ namespace Autobarn.Website.Controllers.Api {
 
 			var car = postData.ToCarEntity(carModel);
 			database.AddCar(car);
+			PublishNewCarMessage(car);
 			return Created($"/api/cars/{car.Registration}", car);
+		}
+
+		void PublishNewCarMessage(Car car) {
+			var message = new NewCarMessage {
+				Color = car.Color,
+				Make = car.CarModel.Make.Name,
+				Model = car.CarModel.Name,
+				Year = car.Year,
+				Registration = car.Registration,
+				ListedAt = DateTimeOffset.UtcNow
+			};
+			bus.PubSub.Publish(message);
 		}
 		
 		[HttpGet]
