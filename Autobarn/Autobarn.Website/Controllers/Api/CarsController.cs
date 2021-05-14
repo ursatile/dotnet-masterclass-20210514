@@ -3,6 +3,7 @@ using Autobarn.Data.Entities;
 using Autobarn.Website.Models.Api;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Dynamic;
 using System.Linq;
 
 namespace Autobarn.Website.Controllers.Api {
@@ -34,8 +35,25 @@ namespace Autobarn.Website.Controllers.Api {
 		}
 		
 		[HttpGet]
-		public IActionResult Get() {
-			return Ok(database.Cars.ToList());
+		public IActionResult Get(int index, int count = 2) {
+			var items = database.Cars.Skip(index).Take(count);
+			var total = database.Cars.Count();
+			var links = Paginate("/api/cars", index, count, total);
+			var result = new {				
+				_links = links,
+				index = index,
+				count = count,
+				total = total,
+				items = items
+			};
+			return Ok(result);
+		}
+
+		public dynamic Paginate(string url, int index, int count, int total) {
+			dynamic links = new ExpandoObject();
+			if (index > 0) links.previous = $"{url}?index={index-count}&count={count}";
+			if (index < total) links.next = $"{url}?index={index+count}&count={count}";
+			return links;	
 		}
 
 		[HttpGet("{id}")]
